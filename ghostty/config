@@ -1,10 +1,8 @@
-# --- Appearance ---
-font-family = "JetBrainsMono Nerd Font"
-font-size = 13
 
-# --- Window & UI ---
-# Removes the macOS title bar for the "Floating" look
-window-decoration = false
-window-padding-x = 15
-window-padding-y = 15
-window-padding-balance = true
+background-opacity = 0.75
+background-blur = 18
+theme = Atom
+cursor-style = bar
+macos-icon = xray
+macos-icon-ghost-color = #0B1D85
+confirm-close-surface = false

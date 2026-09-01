@@ -32,15 +32,24 @@ alias ..='cd ..'
 alias zshconfig="code ~/.zshrc"
 alias p10kconfig="code ~/.p10k.zsh"
 alias ghosttyconfig="code ~/.config/ghostty/config"
-alias server="ssh thorvi@dharmiks-macbook-pro"
 alias dev='cd ~/Dev'
 alias vit='cd ~/VIT'
+alias ssh='TERM=xterm-256color ssh'
+alias server="ssh thorvi@dharmiks-macbook-pro"
+alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 
 # 5. Completions
 fpath=(/Users/dharmikshinde/.docker/completions $fpath)
 autoload -Uz compinit && compinit
 
-# 6. Plugins (Functionality only)
+# 6. Plugins & Tools
 if [ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+# Tool Initializations
+eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+
+# Added by Antigravity IDE
+export PATH="/Users/dharmikshinde/.antigravity-ide/antigravity-ide/bin:$PATH"
